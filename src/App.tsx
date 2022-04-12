@@ -1,24 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import StringTypes from './components/StringTypes';
+import NumberTypes from './components/NumberTypes';
+import BooleanTypes from './components/BooleanTypes';
+import ArrayTypes from './components/ArrayTypes';
+import ObjectTypes from './components/ObjectTypes';
+import StatusTypes from './components/StatusTypes';
+import ChildrenTypes from './components/ChildrenTypes';
+import OptionalTypes from './components/OptionalTypes';
+import ClickEventTypes from './components/ClickEventTypes';
 
 function App() {
+  const friends = [
+    {
+      id: 1,
+      name: 'murshed'
+    },
+    {
+      id: 1,
+      name: 'sakin'
+    },
+    {
+      id: 1,
+      name: 'rasel'
+    },
+    {
+      id: 1,
+      name: 'nafisa'
+    }
+  ]
+  const company = {
+    name: 'Technext Limited',
+    location: '14th floor, Elegant Shopping Mall, Sylhet'
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>React Typescript All Types</h1>
+      <StringTypes name="sourav" />
+      <NumberTypes number={10} />
+      <BooleanTypes isLoggedIn={true} />
+      <ArrayTypes friends={friends} />
+      <ObjectTypes company={company} />
+      <StatusTypes status='loading' />
+      <ChildrenTypes>
+        <StringTypes name="sourav" />
+      </ChildrenTypes>
+      <OptionalTypes />
+      <ClickEventTypes handleClick={(event) => {
+        alert('Button clicked')
+      }} />
     </div>
   );
 }
