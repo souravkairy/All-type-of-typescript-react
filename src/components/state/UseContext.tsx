@@ -5,7 +5,7 @@ const UseContext = () => {
     const theme = useContext(ThemeContext)
     return (
         <div>UseContext :{' '}
-            <button style={{ backgroundColor: theme.dark }}>I am Context</button>
+            <button style={{ backgroundColor: theme.dark.main }} >I am Context</button>
         </div>
     )
 }
