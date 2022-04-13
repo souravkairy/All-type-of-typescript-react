@@ -8,6 +8,8 @@ import StatusTypes from './components/StatusTypes';
 import ChildrenTypes from './components/ChildrenTypes';
 import OptionalTypes from './components/OptionalTypes';
 import ClickEventTypes from './components/ClickEventTypes';
+import UseState from './components/state/UseState';
+import UseContext from './components/state/UseContext';
 
 function App() {
   const friends = [
@@ -33,7 +35,7 @@ function App() {
     location: '14th floor, Elegant Shopping Mall, Sylhet'
   }
   return (
-    <div className="App">
+    <div className="App" style={{ padding: '20px 0px' }}>
       <h1>React Typescript All Types</h1>
       <StringTypes name="sourav" />
       <NumberTypes number={10} />
@@ -48,6 +50,8 @@ function App() {
       <ClickEventTypes handleClick={(event) => {
         alert('Button clicked')
       }} />
+      <UseState />
+      <UseContext />
     </div>
   );
 }
